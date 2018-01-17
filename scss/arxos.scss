@@ -11,12 +11,12 @@
   }
 }
 @mixin ax-cursor($cursor, $root_dir, $img_dir){
-  @if $cursor == "zoom-in" or $cursor == "zoom-out" {
-    cursor:url(#{$img_dir}/#{$cursor}.cur), url(#{$root_dir}/#{$img_dir}/#{$cursor}.cur), auto;
-    cursor:-moz-#{$cursor};
-    cursor:-webkit-#{$cursor};
-    cursor:#{$cursor};
-  }
+	@if $cursor == "zoom-in" or $cursor == "zoom-out" {
+		cursor:url(#{$img_dir}/#{$cursor}.cur), url(#{$root_dir}/#{$img_dir}/#{$cursor}.cur), auto;
+		cursor:-moz-#{$cursor};
+		cursor:-webkit-#{$cursor};
+		cursor:#{$cursor};
+	}
 }
 @mixin ax-vertical-align($pos:relative){
   position:$pos;
