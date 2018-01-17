@@ -1,0 +1,29 @@
+@function ax-get-composite-overlay-colour($composite-colour, $bg-colour, $opacity) {
+  @if type-of($composite-colour) == color and type-of($bg-colour) == color and type-of($opacity) == number and $opacity >= 0 and $opacity <= 1 {
+    @return ($composite-colour - (1 - $opacity)*$bg-colour) / $opacity;
+  } @else {
+    @warn "Invalid values provided for get-composite-overlay-colour(). $composite-colour & $bg-colour must be colour values and $opacity must be number >= 0 and <= 1";
+  }
+}
+@mixin ax-cursor($cursor, $root_dir, $img_dir){
+  @if $cursor == "zoom-in" or $cursor == "zoom-out" {
+    cursor:url(#{$img_dir}/#{$cursor}.cur), url(#{$root_dir}/#{$img_dir}/#{$cursor}.cur), auto;
+    cursor:-moz-#{$cursor};
+    cursor:-webkit-#{$cursor};
+    cursor:#{$cursor};
+  }
+}
+@mixin ax-vertical-align($pos:relative){
+  position:$pos;
+  top:50%;
+  -webkit-transform:translateY(-50%);
+  -ms-transform:translateY(-50%);
+  transform:translate(-50%);
+}
+.ax-scrollbar-measure {
+  width:100px;
+  height:100px;
+  overflow: scroll;
+  position:absolute;
+  top:-9999px;
+}

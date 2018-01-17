@@ -1,2 +1,2 @@
 # arxos
-Arxos - Javascript &amp; CSS general helper library
+Arxos - Javascript, CSS, SCSS and PHP general helper library
