@@ -1,3 +1,8 @@
+/*
+*
+* Author: Russel Gauthier(c)
+*
+ */
 //IE doesn't have .remove() on elements. Edge & all others do. Polyfill from: https://developer.mozilla.org/en-US/docs/Web/API/ChildNode/remove
 if (!('remove' in Element.prototype)) {
     Element.prototype.remove = function() {

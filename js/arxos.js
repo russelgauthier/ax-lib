@@ -1,3 +1,8 @@
+/*
+*
+* Author: Russel Gauthier(c)
+*
+ */
 /*! 09/24/2015 Russel Gauthier - gauthier.russel@gmail.com
  ax.enquire module that requires enquire.js to provide auto-updated(based on Bootstrap & Facebook values):
  -isXs(), isSm(), isMd(), isLg(), isXsMin(), isSmMin(), isMdMin(), isLgMin()

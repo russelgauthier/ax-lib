@@ -1,3 +1,8 @@
+/*
+*
+* Author: Russel Gauthier(c)
+*
+ */
 @function ax-get-composite-overlay-colour($composite-colour, $bg-colour, $opacity) {
   @if type-of($composite-colour) == color and type-of($bg-colour) == color and type-of($opacity) == number and $opacity >= 0 and $opacity <= 1 {
     @return ($composite-colour - (1 - $opacity)*$bg-colour) / $opacity;

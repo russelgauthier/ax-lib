@@ -1,4 +1,9 @@
 <?php
+/*
+*
+* Author: Russel Gauthier(c)
+*
+ */
 namespace Arxos\Detect;
 
 class Detect {

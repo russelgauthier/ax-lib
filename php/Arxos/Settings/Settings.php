@@ -1,4 +1,9 @@
 <?php
+/*
+*
+* Author: Russel Gauthier(c)
+*
+ */
 namespace Arxos\Settings;
 use Arxos\Util\Util;
 

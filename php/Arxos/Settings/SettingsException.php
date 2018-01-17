@@ -1,4 +1,9 @@
 <?php
+/*
+*
+* Author: Russel Gauthier(c)
+*
+ */
 namespace Arxos\Settings;
 
 class SettingsException extends Exception {
