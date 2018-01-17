@@ -1,6 +1,6 @@
 /*
 *
-* Author: Russel Gauthier(c)
+* Author: Russel Gauthier(c) - GPLv3
 *
  */
 //IE doesn't have .remove() on elements. Edge & all others do. Polyfill from: https://developer.mozilla.org/en-US/docs/Web/API/ChildNode/remove

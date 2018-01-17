@@ -1,6 +1,6 @@
 /*
 *
-* Author: Russel Gauthier(c)
+* Author: Russel Gauthier(c) - GPLv3
 *
  */
 /*! 09/24/2015 Russel Gauthier - gauthier.russel@gmail.com

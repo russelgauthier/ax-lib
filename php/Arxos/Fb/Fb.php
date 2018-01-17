@@ -1,7 +1,7 @@
 <?php
 /*
 *
-* Author: Russel Gauthier(c)
+* Author: Russel Gauthier(c) - GPLv3
 *
  */
 namespace Arxos\Fb;
