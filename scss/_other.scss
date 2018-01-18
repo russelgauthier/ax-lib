@@ -1,0 +1,114 @@
+/*
+*
+* Author: Russel Gauthier(c) - GPLv3 - Arxos
+*
+ */
+/* Standard AX Styles */
+.vcentre { /* Apply to each column, put <!-- --> between all columns */
+  display: inline-block;
+  vertical-align: middle;
+  float: none;
+}
+.hcentre { /* Bootstrap >= 3.0.1 has center-block(without the float-none) */
+  float:none;
+  margin:0 auto;
+}
+.row-equal-height, .row_equal_height > div[class*='col-'] {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex:1 0 auto;
+}
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.nodrag {
+  user-drag: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+$mainAccent: #1c6a85;
+$mainAccentOver: darken(#5f8615, 0%);
+$tooltipColour: #0F6CB6;
+
+$togglesOut: #979080;
+$togglesOver: #84a2bf;
+$togglesDown: #6992b5;
+$touchAccent: $mainAccentOver;
+$touchAccentOver: lighten($touchAccent, 30%);
+$topBarColour: lighten(#cdd5ec, 13%);
+$disabledColour: #ccc;
+.dbg-bg-1 {
+  background-color:fuchsia;
+}
+.dbg-bg-2 {
+  background-color:#d08002;
+}
+.dbg-bg-3 {
+  background-color:#93c54b;
+}
+.dbg-bg-4 {
+  background-color:#40b5e3;
+}
+.dbg-bg-5 {
+  background-color:#ea364f;
+}
+.dbg-bg-6 {
+  background-color:#f38b9a;
+}
+
+//For determining scrollbar width 
+.scrollbar-test-measure {
+	width: 100px;
+	height: 100px;
+	overflow: scroll;
+	position: absolute;
+	top: -9999px;
+}
+@media print {
+  .hidden-print {
+    display: none!important;
+  }
+  .visible-print {
+    display: block!important;
+  }
+  table.visible-print {
+    display: table!important;
+  }
+  tr.visible-print {
+    display: table-row!important;
+  }
+  th.visible-print, td.visible-print {
+    display: table-cell!important;
+  }
+  .visible-print-block {
+    display: block!important;
+  }
+  .visible-print-inline {
+    display:inline!important;
+  }
+  .visible-print-inline-block {
+    display: inline-block!important;
+  }
+  .print-vertically-cleared {
+    padding:0;
+    margin:0;
+    border-style:none;
+  }
+  .print-a4-paperSize {
+    width:8in!important;
+    height:10in!important;
+  }
+
+}
+

@@ -1,0 +1,62 @@
+/*
+*
+* Author: Russel Gauthier(c) - GPLv3 - Arxos
+*
+ */
+@mixin mq($mqParams){
+  @media #{$mqParams} {
+    @content
+  }
+}
+@mixin orientationLandscape {
+  @include mq("(orientation: landscape)"){
+    @content
+  }
+}
+@mixin orientationPortrait {
+  @include mq("(orientation: portrait)"){
+    @content
+  }
+}
+@mixin bpLgMin {
+  @include mq("screen and (min-width: 1200px)"){
+    @content
+  }
+}
+@mixin bpMdMin {
+  @include mq("screen and (min-width: 992px)"){
+    @content
+  }
+}
+@mixin bpSmMin {
+  @include mq("screen and (min-width: 768px)"){
+    @content
+  }
+}
+@mixin bpXsMin {
+  @include mq("screen and (min-width: 0px)"){
+    @content
+  }
+}
+@mixin fb {
+  @include mq("only screen and (min-width: 810px)"){
+    @content
+  }
+}
+
+
+//USE:
+//p {
+//  font-size: 2em;
+//
+//  @include fb {
+//    font-size: 23em;
+//  }
+//}
+//
+//or
+//@include fb {
+//  font-size: 23em;
+//}
+
+/*  Custom media queries: */
