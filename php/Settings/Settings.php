@@ -1,7 +1,7 @@
 <?php
 /*
 *
-* Author: Russel Gauthier(c) - GPLv3 - Arxos
+* Author: Russel Gauthier(c) - GPLv3 - Arxos - v1.8
 *
  */
 namespace Arxos\Settings;
@@ -9,11 +9,11 @@ use Arxos\Util\Util;
 
 class Settings {
     private $settings;
-    
+
     function __construct(array $settings){
         $this->settings = $settings;
     }
-    
+
     function get(string $name, $default = null) {
         $result = null;
 
@@ -38,19 +38,19 @@ class Settings {
                 break;
             }
         }
-        
+
         return $result;
     }
     function getSettings(){
         return $this->settings;
     }
-    
-    function set(string $name, $value, bool $override = false){        
+
+    function set(string $name, $value, bool $override = false){
         $name = trim($name);
         if(empty($name)){
             throw new SettingsException("set(string name, value, override=false) ->  name cannot be an empty string");
         }
-        
+
         $parts = preg_split("/\./", $name);
 
         $currValue = &$this->settings;
@@ -66,12 +66,12 @@ class Settings {
             $currValue = $value;
         }
     }
-    
+
     function setDefaults(array $defaultSettings, bool $override = false){
         $str = "";
         function walk_settings(array &$curr_settings, string $str = "", array $levels = []) {
             $str = "";
-            
+
             array_walk($curr_settings, function($v, $k) use (&$str, &$levels){
                 if(is_array($v) && Util::is_array_assoc($v)){
                     array_push($levels, $k);
@@ -85,7 +85,7 @@ class Settings {
                     $str .= "$k//" . json_encode($v) . "\n";
                 }
             });
-            
+
             return $str;
         }
 

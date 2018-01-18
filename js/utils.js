@@ -1,6 +1,6 @@
 /*
 *
-* Author: Russel Gauthier(c) - GPLv3 - Arxos
+* Author: Russel Gauthier(c) - GPLv3 - Arxos - v1.8
 *
  */
 //IE doesn't have .remove() on elements. Edge & all others do. Polyfill from: https://developer.mozilla.org/en-US/docs/Web/API/ChildNode/remove
@@ -56,20 +56,20 @@ if (!Array.prototype.map) {
 */
 function createCssCursor(cursor, rootDir, cursorImgDir, asString){
 	var result = [];
-	
+
 	if(rootDir != null && cursorImgDir != null && (cursor === "zoom-in" || cursor === "zoom-out")){
 		result.push("url(" + cursorImgDir + "/" + cursor + ".cur), url(" + rootDir + "/" + cursorImgDir + "/" + cursor + ".cur), auto");
 		result.push("-moz-zoom-in");
 		result.push("-webkit-zoom-in");
 		result.push("zoom-in");
 	}
-	
+
 	if(asString){
 		var tmpResult = "";
 		result.forEach(function(currVal){ tmpResult += "cursor:" + currVal + ";"; });
 		result = tmpResult;
 	}
-	
+
 	return result;
 };
 
@@ -162,7 +162,7 @@ var logMsg = function(notAssert, mark, persists){
 //Normalize paths
 function pathNormalize(path){
     var result = "";
-    
+
     var urlParts = path.split("#!")[0].split("/");
     var nonRelativeFound = false;
     for(var i = 0; i < urlParts.length; i++){
@@ -171,7 +171,7 @@ function pathNormalize(path){
         if(i === 0 && nonRelativeFound){
             nonRelativeFound = false;
         }
-        
+
         if(currUrlPart === ".."){
             if(nonRelativeFound){
                 urlParts = urlParts.slice(0, i - 1).concat(urlParts.slice(i + 1));
@@ -187,7 +187,7 @@ function pathNormalize(path){
     while(result.indexOf("//") > -1){
         result = result.replace("//", "/");
     }
-    
+
     return result;
 };
 
@@ -197,7 +197,7 @@ var pathJoin = function(path1, path2){ //can accept unlimited paths
     path2 = !path2 ? "" : path2;
 
     var result = "";
-    
+
     if(!((path1 === "" && path2 === "") || typeof(path1) !== "string" || typeof(path2) !== "string")){
         var paths = [];
         var hasProtocol = false;
@@ -208,12 +208,12 @@ var pathJoin = function(path1, path2){ //can accept unlimited paths
             protocol = path1.split("://")[0];
             hasProtocol = true;
             domain = path1.split("://")[1].split("/")[0];
-            
+
             paths.push(path1.split("://")[1].split("/").slice(1).join("/").split("#!")[0]);
         } else {
             paths.push(path1.split("#!")[0]);
         }
-        
+
         if(path2 !== "" && path2 !== "/" && path2 !== "//"){
             paths.push(path2);
         }
@@ -256,7 +256,7 @@ var pathJoin = function(path1, path2){ //can accept unlimited paths
     if(hasProtocol){
         result = protocol + "://" + domain + "/" + result;
     }
-    
+
     return result;
 };
 
@@ -269,7 +269,7 @@ var pathJoin = function(path1, path2){ //can accept unlimited paths
 //Gives root url from the top of structure
 var getRootFileUrl = function(path){
     var result = null;
-    
+
     var pathOrig = path;
     if(arguments.length > 1){
         for(var i = 1; i < arguments.length; i++){
@@ -304,7 +304,7 @@ var getBranch = function(){
     if(APP !== undefined){
 	result = APP.CATALYNX_BRANCH;
     }
-    
+
     return result;
 };
 var getCatalogueFileUrl = function(path){
@@ -344,7 +344,7 @@ var isDev = function(){
     if(getBranch() !== "_current" && getBranch() !== "hotspots"){
 	result = true;
     }
-    
+
     return result;
 };
 var isHotspotsDebug = function(){

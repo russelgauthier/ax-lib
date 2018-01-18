@@ -1,6 +1,6 @@
 /*
 *
-* Author: Russel Gauthier(c) - GPLv3 - Arxos
+* Author: Russel Gauthier(c) - GPLv3 - Arxos - v1.8
 *
  */
 /*! 09/24/2015 Russel Gauthier - gauthier.russel@gmail.com
@@ -77,7 +77,7 @@ angular.module("ax.mediaInfo", [])
         	var scrollbarWidth
 			var scrollbarTestDiv;
 
-			//Create scrollbar test div			
+			//Create scrollbar test div
 			scrollbarTestDiv = document.createElement("div");
 			scrollbarTestDiv.className = "scrollbar-test-measure"; //defined in: _scss/_other.scss
 			document.body.appendChild(scrollbarTestDiv);
@@ -87,7 +87,7 @@ angular.module("ax.mediaInfo", [])
 
 			// Delete the scrollbar test div
 			document.body.removeChild(scrollbarTestDiv);
-			
+
 			return scrollbarWidth;
         },
         getSize: function(){
@@ -532,7 +532,7 @@ angular.module("ax.svgbutton", [])
         link: function(scope, elem, attrs){
             var svgId = elem[0].innerHTML.split("<svg ")[1].split("id=\"")[1].split("\"")[0]
                 + "_" + Date.now() + "_" + Math.random().toString().slice(2);
-            
+
             var styleStr = "";
             if(attrs.axSvgbuttonWidth){
                 styleStr += "width:" + attrs.axSvgbuttonWidth + ";";
@@ -677,8 +677,8 @@ angular.module('ax.ucUtils', [])
                 pixelsStrip: this.pixelsStrip,
                 trimDotString: this.trimDotString,
                 getCatalogueFileUrl: this.getCatalogueFileUrl,
-                getRootFileUrl: this.getRootFileUrl                  
-            };         
+                getRootFileUrl: this.getRootFileUrl
+            };
         }]
     };
 }]);
