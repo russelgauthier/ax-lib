@@ -1,7 +1,7 @@
 #!/usr/local/bin/python3
 #
 #
-# Author: Russel Gauthier(c) - GPLv3 - Arxos
+# Author: Russel Gauthier(c) - GPLv3 - Arxos - v1.9
 #
 #
 
@@ -10,7 +10,7 @@ import sys
 
 VERSION_NEW = sys.argv[1]
 TOP_LEVEL_DIR = os.path.join(os.getcwd(), "..")
-SPLITTER = "Arxos - v1.8
+SPLITTER = "Arxos - v1.9
 allowed_extensions = ("php", "js", "css", "scss", "py")
 
 for (_path, _dirs, _files) in os.walk(TOP_LEVEL_DIR):
@@ -45,10 +45,3 @@ for (_path, _dirs, _files) in os.walk(TOP_LEVEL_DIR):
 
                     os.remove(full_file_name)
                     os.rename(tempfile, full_file_name)
-
-
-
-
-
-
-
