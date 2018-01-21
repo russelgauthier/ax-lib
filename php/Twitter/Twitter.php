@@ -1,7 +1,7 @@
 <?php
 /*
 *
-* Author: Russel Gauthier(c) - GPLv3 - Arxos - v1.9
+* Author: Russel Gauthier(c) - GPLv3 - Arxos - v1.10
 *
  */
 namespace Arxos\Twitter;
