@@ -10,8 +10,8 @@ import sys
 
 VERSION_NEW = sys.argv[1]
 TOP_LEVEL_DIR = os.path.join(os.getcwd(), "..")
-SPLITTER = "Arxos - v1.10
-allowed_extensions = ("php", "js", "css", "scss", "py")
+SPLITTER = "Arxos - v"
+allowed_extensions = ("php", "js", "css", "scss")
 
 for (_path, _dirs, _files) in os.walk(TOP_LEVEL_DIR):
     if "git" not in _path:
