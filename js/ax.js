@@ -1,6 +1,6 @@
 /*
 *
-* Author: Russel Gauthier(c) - GPLv3 - Arxos - v1.13
+* Author: Russel Gauthier(c) - GPLv3 - Arxos - v1.13.1
 *
  */
 /*! 09/24/2015 Russel Gauthier - gauthier.russel@gmail.com
