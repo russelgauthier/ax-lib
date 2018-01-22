@@ -10,3 +10,5 @@
 1.9
 1.10
 1.11
+1.12 - Added Settings.php & SeetingsException.php & started login (Login.php + 0Auth2_OpenID)
+

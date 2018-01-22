@@ -5,6 +5,7 @@
 *
  */
 namespace Arxos\Settings;
+use Arxos\Util\Util;
 
 class Settings {
     private $settings;
@@ -72,7 +73,7 @@ class Settings {
             $str = "";
 
             array_walk($curr_settings, function($v, $k) use (&$str, &$levels){
-                if(is_array($v)){
+                if(is_array($v) && Util::is_array_assoc($v)){
                     array_push($levels, $k);
                     $str .= walk_settings($v, $str, $levels);
                     array_pop($levels);
@@ -80,7 +81,8 @@ class Settings {
                     foreach($levels as $level){
                         $str .= "$level.";
                     }
-                    $str .= "$k//$v\n";
+
+                    $str .= "$k//" . json_encode($v) . "\n";
                 }
             });
 
@@ -88,11 +90,12 @@ class Settings {
         }
 
         $strSettings = trim(walk_settings($defaultSettings, $str));
+
         foreach(preg_split("/\\n/", $strSettings) as $strSetting){
             $split_results = preg_split("/\/\//", $strSetting);
 
             $name = $split_results[0];
-            $value = $split_results[1];
+            $value = json_decode($split_results[1], 1);
 
             $this->set($name, $value, $override);
         }
