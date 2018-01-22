@@ -11,7 +11,13 @@ if (!('remove' in Element.prototype)) {
         }
     };
 }
-
+//IE doesn't have .startsWith() for strings. Edge & all others do. Polyfill from: https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/String/startsWith
+if (!String.prototype.startsWith) {
+    String.prototype.startsWith = function (searchString, position) {
+	position = position || 0;
+	return this.substr(position, searchString.length) === searchString;
+    };
+}
 // Production steps / ECMA-262, Edition 5, 15.4.4.19
 // Référence : http://es5.github.io/#x15.4.4.19
 if (!Array.prototype.map) {
@@ -287,6 +293,7 @@ var getRootFileUrl = function(path){
             result += APP.CATALYNX_ROOT_URL;
         }
 
+        //result += "/_branches/" + APP.CATALYNX_BRANCH + "/";
         result += "/_branches/" + APP.CATALYNX_BRANCH + "/";
 
         if(path.length > 0 && path[0] === "/"){
@@ -302,7 +309,7 @@ var getBranch = function(){
     var result = null;
 
     if(APP !== undefined){
-	result = APP.CATALYNX_BRANCH;
+	    result = APP.BRANCH_NAME;//APP.CATALYNX_BRANCH;
     }
 
     return result;
@@ -375,6 +382,48 @@ var trimDotString = function(text, maxLength){
 
     return result;
 };
+function Settings(settings){
+    var _settings = settings;
+
+    /**
+    * @return {string} - the property value, or, if not found undefined
+    * @throws exception if given name is invalid property name
+    * @param {string} name - "a", "a.b", "a.b.c"
+    * @param {string} defaultValue - value to be used if result is undefined
+    **/
+    var get = function (name, defaultValue) {
+        var result;
+        var parts;
+
+        if (typeof (name) !== "string" || name.length === 0 || !(new RegExp("^(([a-zA-Z_\-])*\.)*(([a-zA-Z_\-])*)$")).test(name)) {
+            throw "Settings:get: invalid property name: " + name + " Must be a non-empty string with only a-zA-Z_- in the property names and . as a separator";
+        } else {
+            if (_settings !== undefined && _settings !== null && typeof (_settings) === "object") {
+
+                parts = name.split(".");
+
+                result = _settings;
+                for (var i in parts) {
+                    var part = parts[i]
+
+                    result = result[part];
+                    if (result === undefined || result === null) {
+                        break;
+                    }
+                }
+            }
+        }
+
+        result = result === undefined && defaultValue !== undefined ? defaultValue : result;
+
+        return result;
+    };
+
+    return {
+        "get": get
+    };
+}
+
 function CatalynxUtils(){
     return {
         pixelsStrip: pixelsStrip,
