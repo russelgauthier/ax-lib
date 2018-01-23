@@ -13,5 +13,4 @@
 1.12 - Added Settings.php & SeetingsException.php & started login (Login.php + 0Auth2_OpenID)
 1.13 - Added fix for IE for differences with startswith
 1.13.1 - Versioning update(name only)
-
-
+1.14

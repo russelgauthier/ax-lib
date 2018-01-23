@@ -1,6 +1,6 @@
 /*
 *
-* Author: Russel Gauthier(c) - GPLv3 - Arxos - v1.13.1
+* Author: Russel Gauthier(c) - GPLv3 - Arxos - v1.14
 *
  */
 //IE doesn't have .remove() on elements. Edge & all others do. Polyfill from: https://developer.mozilla.org/en-US/docs/Web/API/ChildNode/remove
@@ -382,6 +382,11 @@ var trimDotString = function(text, maxLength){
 
     return result;
 };
+function isXzogdo(scope){
+    return scope.mediaInfo.getDimensions().window.width > 1150 && scope.mediaInfo.getDimensions().window.width < 1200
+    && scope.mediaInfo.getDimensions().window.height > 600 && scope.mediaInfo.getDimensions().window.height < 680
+    && !scope.mediaInfo.isTouch();
+}
 function Settings(settings){
     var _settings = settings;
 
