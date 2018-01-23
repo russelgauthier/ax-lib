@@ -1,9 +1,9 @@
 <?php
 /*
 *
-* Author: Russel Gauthier(c) - GPLv3 - Arxos - v1.14
+* Author: Russel Gauthier(c) - GPLv3 - Arxos - v1.15
 *
- */
+*/
 namespace Arxos\Image;
 
 class Image {

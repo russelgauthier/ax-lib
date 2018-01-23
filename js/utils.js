@@ -1,6 +1,6 @@
 /*
 *
-* Author: Russel Gauthier(c) - GPLv3 - Arxos - v1.14
+* Author: Russel Gauthier(c) - GPLv3 - Arxos - v1.15
 *
  */
 //IE doesn't have .remove() on elements. Edge & all others do. Polyfill from: https://developer.mozilla.org/en-US/docs/Web/API/ChildNode/remove
@@ -339,6 +339,7 @@ var getCatalogueFileUrl = function(path){
         if(path.length > 0 && path[0] === "/"){
             path = path.substring(1);
         }
+
 
         result += path;
     }
