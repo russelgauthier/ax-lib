@@ -16,3 +16,5 @@
 1.14
 1.15
 1.16 - Fixed spacing in PHP files
+1.17 - Removed files that shouldn't be part of the repository (.idea)
+     - Added scripts/arxos_other.py (contains a variety of functions/classes)
