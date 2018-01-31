@@ -19,3 +19,4 @@
 1.17 - Removed files that shouldn't be part of the repository (.idea)
      - Added scripts/arxos_other.py (contains a variety of functions/classes)
 1.18 - Added scripts/install.sh (must be updated for full nodejs install
+1.18.1 - Versioning update(forgot to rename in 1.18)

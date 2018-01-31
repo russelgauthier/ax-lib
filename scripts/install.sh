@@ -1,7 +1,7 @@
 #!/bin/bash
 ##
 ##
-## Author: Russel Gauthier(c) - GPLv3 - Arxos - v1.17
+## Author: Russel Gauthier(c) - GPLv3 - Arxos - v1.18.1
 ##
 ##
 

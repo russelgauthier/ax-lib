@@ -1,7 +1,7 @@
 #!/usr/local/bin/python3
 #
 #
-# Author: Russel Gauthier(c) - GPLv3 - Arxos - v1.13.1
+# Author: Russel Gauthier(c) - GPLv3 - Arxos - v1.18.1
 #
 #
 
@@ -11,7 +11,7 @@ import sys
 VERSION_NEW = sys.argv[1]
 TOP_LEVEL_DIR = os.path.join(os.getcwd(), "..")
 SPLITTER = "Arxos - v"
-allowed_extensions = ("php", "js", "css", "scss")
+allowed_extensions = ("php", "js", "css", "scss", "sh")
 
 for (_path, _dirs, _files) in os.walk(TOP_LEVEL_DIR):
     if "git" not in _path:
