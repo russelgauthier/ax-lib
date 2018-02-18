@@ -20,3 +20,4 @@
      - Added scripts/arxos_other.py (contains a variety of functions/classes)
 1.18 - Added scripts/install.sh (must be updated for full nodejs install
 1.18.1 - Versioning update(forgot to rename in 1.18)
+1.19 - Fixed the Python execution path so that it would work on OSX & Linux

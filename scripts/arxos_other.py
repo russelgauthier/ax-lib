@@ -1,7 +1,7 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 ##
 ##
-## Author: Russel Gauthier(c) - GPLv3 - Arxos - v1.18.1
+## Author: Russel Gauthier(c) - GPLv3 - Arxos - v1.19
 ##
 ##
 
@@ -50,7 +50,7 @@ def cleanup(input, cleanLeadingZeros=False):
     if cleanLeadingZeros:
         while input[0] == "0":
             input = input[1:]
-        
+
     input = input.strip()
     return input
 
@@ -101,11 +101,11 @@ def parseXmlLine(line):
                     if i != 1:
                         parts[i - 1] += " " + parts[i]
                         del parts[i]
-                            
+
                         i -= 1
                         non_joined_found = True
                 i += 1
-            
+
         if parts[0][0] == "/":
             result["type"] = "closing_tag"
             parts[0] = parts[0][1:]

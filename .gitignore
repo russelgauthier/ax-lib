@@ -52,3 +52,6 @@ crashlytics-build.properties
 *.min.js
 *.min.css
 *.min.svg
+
+#python env within IdeaJ
+venv/
