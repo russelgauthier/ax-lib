@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 #
 #
-# Author: Russel Gauthier(c) - GPLv3 - Arxos - v1.19
+# Author: Russel Gauthier(c) - GPLv3 - Arxos - v1.20
 #
 #
 
@@ -10,7 +10,7 @@ import sys
 
 VERSION_NEW = sys.argv[1]
 TOP_LEVEL_DIR = os.path.join(os.getcwd(), "..")
-SPLITTER = "Arxos - v1.19
+SPLITTER = "Arxos - %s" % "v"
 allowed_extensions = ("php", "js", "css", "scss", "sh", "py")
 
 for (_path, _dirs, _files) in os.walk(TOP_LEVEL_DIR):

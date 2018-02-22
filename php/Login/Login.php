@@ -1,7 +1,7 @@
 <?php
 /*
 *
-* Author: Russel Gauthier(c) - GPLv3 - Arxos - v1.19
+* Author: Russel Gauthier(c) - GPLv3 - Arxos - v1.20
 *
 */
 namespace Arxos\Login;
