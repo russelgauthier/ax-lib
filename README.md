@@ -1,8 +1,7 @@
 # Arxos
 Description
 ------------
-Arxos - Javascript, CSS, SCSS and PHP general helper library
-
+Arxos - Javascript, CSS, SCSS and PHP general helper utils from a variety of different projects.
 
 Licence:
 ------------
