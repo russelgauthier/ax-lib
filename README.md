@@ -1,4 +1,4 @@
-# arxos
+# Arxos
 Description
 ------------
 Arxos - Javascript, CSS, SCSS and PHP general helper library
