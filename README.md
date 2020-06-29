@@ -1,7 +1,7 @@
-# Arxos
+# Ax-lib
 Description
 ------------
-Arxos - Javascript, CSS, SCSS and PHP general helper utils from a variety of different projects.
+Ax-Lib - Javascript, CSS, SCSS and PHP general helper utils from a variety of different projects.
 
 Licence:
 ------------
