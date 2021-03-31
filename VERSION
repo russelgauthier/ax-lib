@@ -22,3 +22,4 @@
 1.18.1 - Versioning update(forgot to rename in 1.18)
 1.19 - Fixed the Python execution path so that it would work on OSX & Linux
 1.20 - Fixed issue with pathJoin. If any of the arguments are non-strings, it broke. Therefore, converting all to strings first
+1.21 - Example commit (test)
