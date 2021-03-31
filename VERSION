@@ -24,3 +24,4 @@
 1.20 - Fixed issue with pathJoin. If any of the arguments are non-strings, it broke. Therefore, converting all to strings first
 1.21 - Example commit (test)
 1.22 - Test commit 2
+1.23 - Test commit 3
